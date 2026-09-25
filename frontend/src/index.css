@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Manrope:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/* ===== DARK LUXURY THEME (Great Treasure / ITC Grand Chola Reference) ===== */
+:root {
+  --bg-primary: #0A0E0B;       /* Deep dark obsidian charcoal */
+  --bg-secondary: #101512;     /* Slightly lighter dark background */
+  --bg-card: #151C18;          /* Elevated dark luxury card */
+  --bg-card-hover: #1B241F;
+  --accent-gold: #D9A441;      /* Bright warm gold accent */
+  --accent-gold-light: #E5B85C;
+  --accent-green: #164C3B;     /* Deep forest green */
+  --accent-green-hover: #1F634E;
+  --text-primary: #FFFFFF;     /* Pure crisp white headings */
+  --text-secondary: #9CA3AF;   /* Light gray body text */
+  --text-muted: #6B7280;       /* Muted gray subtext */
+  --success: #22C55E;
+  --error: #EF4444;
+  --border-subtle: #202B24;
+  --border-card: #28362D;
+  --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Manrope', system-ui, sans-serif;
+}
+
+/* ===== BASE ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.22;
+  color: var(--text-primary);
+}
+
+/* ===== TYPOGRAPHY UTILITIES ===== */
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem; /* 12px */
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+}
+
+.hero-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.18;
+  color: #FFFFFF;
+}
+
+.section-heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.375rem);
+  font-weight: 700;
+  line-height: 1.22;
+  color: #FFFFFF;
+}
+
+.card-heading {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.body-lead {
+  font-size: clamp(1rem, 1.1vw, 1.125rem);
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.body-text {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+/* ===== BUTTONS ===== */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--accent-gold);
+  color: #070A08;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.btn-gold:hover {
+  background-color: var(--accent-gold-light);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(217, 164, 65, 0.3);
+}
+
+.btn-green {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--accent-gold);
+  color: #070A08;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.btn-green:hover {
+  background-color: var(--accent-gold-light);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(217, 164, 65, 0.3);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: #FFFFFF;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid rgba(217, 164, 65, 0.4);
+}
+
+.btn-outline:hover {
+  background-color: rgba(217, 164, 65, 0.1);
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  transform: translateY(-1px);
+}
+
+/* ===== CARDS & CONTAINERS ===== */
+.card-base {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 0.875rem;
+  box-shadow: var(--card-shadow);
+  transition: all 0.25s ease;
+}
+
+.card-base:hover {
+  border-color: rgba(217, 164, 65, 0.35);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
+}
+
+.gold-divider {
+  width: 48px;
+  height: 2px;
+  background-color: var(--accent-gold);
+  border-radius: 1px;
+}
+
+/* ===== FORM FIELDS ===== */
+.input-field {
+  width: 100%;
+  background-color: #0F1411;
+  border: 1px solid var(--border-card);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  color: #FFFFFF;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  transition: border-color 0.2s ease;
+}
+
+.input-field-icon {
+  padding-left: 2.75rem !important;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 2px rgba(217, 164, 65, 0.2);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-secondary); }
+::-webkit-scrollbar-thumb { background: var(--accent-gold); border-radius: 3px; }
