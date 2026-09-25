@@ -18,7 +18,7 @@ const STATIC_DETAIL: Record<string, RoomType> = {
       'https://images.unsplash.com/photo-1615460549969-36fa19521a4f?w=800&q=85',
     ],
     cancellation_policy: 'Free cancellation up to 48 hours before check-in. After that, the first night is non-refundable.',
-    rates: [{ id: '1', room_type_id: 'static-1', base_price: 25000, taxes_percent: 7.5, fees: 500, is_active: true }],
+    rates: [{ id: '1', room_type_id: 'static-1', base_price: 1500, taxes_percent: 7.5, fees: 100, is_active: true }],
   },
   'static-2': {
     id: 'static-2', hotel_id: '1', name: 'Deluxe Room', status: 'active',
@@ -30,7 +30,7 @@ const STATIC_DETAIL: Record<string, RoomType> = {
       'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=85',
     ],
     cancellation_policy: 'Free cancellation up to 72 hours before check-in.',
-    rates: [{ id: '2', room_type_id: 'static-2', base_price: 35000, taxes_percent: 7.5, fees: 500, is_active: true }],
+    rates: [{ id: '2', room_type_id: 'static-2', base_price: 2000, taxes_percent: 7.5, fees: 150, is_active: true }],
   },
   'static-3': {
     id: 'static-3', hotel_id: '1', name: 'Executive Suite', status: 'active',
@@ -42,7 +42,7 @@ const STATIC_DETAIL: Record<string, RoomType> = {
       'https://images.unsplash.com/photo-1630585604459-71a89fa9a1a6?w=800&q=85',
     ],
     cancellation_policy: 'Free cancellation up to 5 days before check-in. Partial refund within 5 days.',
-    rates: [{ id: '3', room_type_id: 'static-3', base_price: 55000, taxes_percent: 7.5, fees: 1000, is_active: true }],
+    rates: [{ id: '3', room_type_id: 'static-3', base_price: 2500, taxes_percent: 7.5, fees: 200, is_active: true }],
   },
   'static-4': {
     id: 'static-4', hotel_id: '1', name: 'Presidential Suite', status: 'active',
@@ -54,7 +54,7 @@ const STATIC_DETAIL: Record<string, RoomType> = {
       'https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=800&q=85',
     ],
     cancellation_policy: 'Non-refundable within 7 days of check-in. Full refund more than 7 days before arrival.',
-    rates: [{ id: '4', room_type_id: 'static-4', base_price: 85000, taxes_percent: 7.5, fees: 2000, is_active: true }],
+    rates: [{ id: '4', room_type_id: 'static-4', base_price: 3000, taxes_percent: 7.5, fees: 250, is_active: true }],
   },
 }
 

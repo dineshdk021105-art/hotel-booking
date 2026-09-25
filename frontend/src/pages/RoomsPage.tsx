@@ -19,7 +19,7 @@ const STATIC_ROOMS: RoomType[] = [
     amenities: ['Free Wi-Fi', 'Air Conditioning', 'Flat-screen TV', 'Mini-bar'],
     images: ['https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80'],
     status: 'active',
-    rates: [{ id: '1', room_type_id: 'static-1', base_price: 25000, taxes_percent: 7.5, fees: 500, is_active: true }],
+    rates: [{ id: '1', room_type_id: 'static-1', base_price: 1500, taxes_percent: 7.5, fees: 100, is_active: true }],
   },
   {
     id: 'static-2',
@@ -32,7 +32,7 @@ const STATIC_ROOMS: RoomType[] = [
     amenities: ['Free Wi-Fi', 'Air Conditioning', 'Bathtub', 'Room Service', 'Mini-bar'],
     images: ['https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=600&q=80'],
     status: 'active',
-    rates: [{ id: '2', room_type_id: 'static-2', base_price: 35000, taxes_percent: 7.5, fees: 500, is_active: true }],
+    rates: [{ id: '2', room_type_id: 'static-2', base_price: 2000, taxes_percent: 7.5, fees: 150, is_active: true }],
   },
   {
     id: 'static-3',
@@ -45,7 +45,7 @@ const STATIC_ROOMS: RoomType[] = [
     amenities: ['Free Wi-Fi', 'Jacuzzi', 'Living Room', 'Premium Bar', 'Butler Service', 'City View'],
     images: ['https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600&q=80'],
     status: 'active',
-    rates: [{ id: '3', room_type_id: 'static-3', base_price: 55000, taxes_percent: 7.5, fees: 1000, is_active: true }],
+    rates: [{ id: '3', room_type_id: 'static-3', base_price: 2500, taxes_percent: 7.5, fees: 200, is_active: true }],
   },
   {
     id: 'static-4',
@@ -58,7 +58,7 @@ const STATIC_ROOMS: RoomType[] = [
     amenities: ['Free Wi-Fi', 'Private Pool Access', 'Jacuzzi', 'Dining Room', 'Full Bar', 'Panoramic View', 'Private Chef Available'],
     images: ['https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80'],
     status: 'active',
-    rates: [{ id: '4', room_type_id: 'static-4', base_price: 85000, taxes_percent: 7.5, fees: 2000, is_active: true }],
+    rates: [{ id: '4', room_type_id: 'static-4', base_price: 3000, taxes_percent: 7.5, fees: 250, is_active: true }],
   },
 ]
 
@@ -71,7 +71,7 @@ export default function RoomsPage() {
   const [rooms, setRooms] = useState<RoomType[]>([])
   const [loading, setLoading] = useState(true)
   const [sortBy, setSortBy] = useState<'price_asc' | 'price_desc' | 'capacity'>('price_asc')
-  const [maxPrice] = useState<number>(500000)
+  const [maxPrice] = useState<number>(10000)
   const [minCapacity, setMinCapacity] = useState<number>(guestsParam)
 
   useEffect(() => {

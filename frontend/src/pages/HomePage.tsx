@@ -377,10 +377,10 @@ export default function HomePage() {
 
 /* ─── Static room fallback ─── */
 const STATIC_ROOMS = [
-  { name: 'Standard Room', price: 12000, guests: 2, bed: '1 Bed', image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80' },
-  { name: 'Deluxe Room', price: 18000, guests: 2, bed: '1 Bed', image: 'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=600&q=80' },
-  { name: 'Executive Suite', price: 28000, guests: 2, bed: '1 Bed', image: 'https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600&q=80' },
-  { name: 'Presidential Suite', price: 45000, guests: 4, bed: '1 Bed', image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80' },
+  { name: 'Standard Room', price: 1500, guests: 2, bed: '1 Bed', image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80' },
+  { name: 'Deluxe Room', price: 2000, guests: 2, bed: '1 Bed', image: 'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=600&q=80' },
+  { name: 'Executive Suite', price: 2500, guests: 2, bed: '1 Bed', image: 'https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600&q=80' },
+  { name: 'Presidential Suite', price: 3000, guests: 4, bed: '1 Bed', image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80' },
 ]
 
 function StaticRoomCard({ room }: { room: typeof STATIC_ROOMS[0]; index?: number }) {
@@ -410,11 +410,11 @@ function StaticRoomCard({ room }: { room: typeof STATIC_ROOMS[0]; index?: number
 }
 
 const STATIC_FOOD = [
-  { name: 'Jollof Rice & Chicken', price: 1250, image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?w=500&q=80' },
-  { name: 'Fried Rice & Chicken', price: 1250, image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=500&q=80' },
-  { name: 'Egusi Soup & Pounded Yam', price: 1400, image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=500&q=80' },
-  { name: 'Peppered Meat', price: 1000, image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=500&q=80' },
-  { name: 'Chicken Shawarma', price: 750, image: 'https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?w=500&q=80' },
+  { name: 'Jollof Rice & Chicken', price: 850, image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?w=500&q=80' },
+  { name: 'Fried Rice & Chicken', price: 800, image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=500&q=80' },
+  { name: 'Egusi Soup & Pounded Yam', price: 900, image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=500&q=80' },
+  { name: 'Peppered Meat', price: 700, image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=500&q=80' },
+  { name: 'Chicken Shawarma', price: 550, image: 'https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?w=500&q=80' },
 ]
 
 function StaticFoodCard({ food }: { food: typeof STATIC_FOOD[0] }) {
