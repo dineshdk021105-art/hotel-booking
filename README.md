@@ -36,3 +36,11 @@ npm install
 npm run dev
 ```
 Runs at: `http://localhost:3001`
+
+## 🌐 Deployment on Vercel
+1. Set **Root Directory** to `frontend`.
+2. Add Environment Variables:
+   - `VITE_SUPABASE_URL`
+   - `VITE_SUPABASE_ANON_KEY`
+3. Deploy!
+
